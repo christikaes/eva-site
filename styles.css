@@ -5,6 +5,16 @@ html, body {
 	height: 100%;
 }
 
+.container-fluid {
+	text-align: center;
+}
+
+.header{
+	background-color: #222;
+	/*height: 400px;?*/
+	padding: 50px;
+}
+
 /* SVG animation */
 
 .draw-fast {
@@ -35,6 +45,7 @@ html, body {
 	animation: color 5s ease forwards;
 }
 
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
@@ -47,4 +58,29 @@ html, body {
   50% { fill: #111; }
   80% { fill: #eee; }
   100% { fill: #eee; }
+}
+ 
+.doctor{
+  fill-opacity:0;
+  stroke: #eee;
+  stroke-width: 10;
+  stroke-dasharray: 4500;
+  stroke-dashoffset: 4500;
+  animation: doctor 5s linear forwards;
+}
+
+@keyframes doctor {
+  0% { fill-opacity: 0;
+  		stroke:#eee;
+  		stroke-dashoffset: 4500; }
+  60% { fill-opacity: 0;
+  		stroke:#eee;}
+  80% { fill-opacity: 0.5;
+  		stroke:#eee;
+  		stroke-opacity:1;
+  		stroke-dashoffset: 0; }
+  100% { fill-opacity: 1;
+  		stroke-opacity:0;
+  		stroke:none;
+  		stroke-dashoffset: 0; }
 }
